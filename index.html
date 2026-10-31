@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palatuwa Gunarathana Central College</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root {
+            --primary: #800000; /* Maroon school color */
+            --secondary: #gold;
+            --accent: #d4af37;  /* Gold accent */
+            --dark: #2c3e50;
+            --light: #f9f9f9;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--accent);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-area h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        .logo-area p {
+            font-size: 0.8rem;
+            color: var(--accent);
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        linear-gradient(45deg, var(--primary), var(--dark));
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+        .badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 5px 15px;
+            font-weight: bold;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* GRID LAYOUT FOR SECTIONS */
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+
+        /* CARD STYLES */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary);
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        /* TIMELINE STYLES */
+        .timeline-item {
+            padding-left: 20px;
+            border-left: 2px solid #ccc;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-area">
+            <h1>PGCC MATARA</h1>
+            <p>Palatuwa Gunarathana Central College</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#notices">Notice Board</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Showcase -->
+    <section class="hero" id="home">
+        <span class="badge">Celebrating a Century of Excellence</span>
+        <h2>Welcome to Our Official Portal</h2>
+        <p>Striving for wisdom, integrity, and honor. Tracing a proud heritage of educational service in Matara, Sri Lanka since our foundation.</p>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <div class="grid">
+            
+            <!-- Left Main Column -->
+            <main>
+                <div class="card" id="history">
+                    <h3>Our Historical Journey</h3>
+                    <p>Established through the visionary alignment of our founder, Venerable Atampala Gunarathana Thero, the college transformed from a humble village shelter into a leading center of regional learning.</p>
+                    <br>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">1924</div>
+                        <p>Initial private Buddhist classes start inside a village room thatched with coconut foliage.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">March 23, 1927</div>
+                        <p>The institutional layout gets formally recognized and aligned, setting up the framework for formal registrations.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026</div>
+                        <p>The establishment honors its grand Centenary Jubilee, observing 100 historical years of legacy.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>School Anthem & Motto</h3>
+                    <p>Our guiding values drive every generation of students to serve our motherland, uphold moral character, and discover academic truth through dedicated education.</p>
+                </div>
+            </main>
+
+            <!-- Right Sidebar Column -->
+            <aside id="notices">
+                <div class="card" style="border-left-color: var(--accent);">
+                    <h3>Latest Notices</h3>
+                    <hr style="margin-bottom: 15px; border: 0; border-top: 1px solid #eee;">
+                    <p><strong>Centenary Updates:</strong> Check the gallery for highlights from the 100th-anniversary celebrations.</p>
+                    <br>
+                    <p><strong>Admissions:</strong> Applications are now open for the next academic year intake.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Quick Links</h3>
+                    <p>📍 Matara, Sri Lanka</p>
+                    <p>📧 info@gunarathanacentral.edu</p>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- Footer Area -->
+    <footer>
+        <p>&copy; 2026 Palatuwa Gunarathana Central College. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
